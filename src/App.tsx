@@ -81,8 +81,6 @@ const ORGANIZERS = {
     eventsHosted: 5,
     verified: false,
     instagram: 'exposure.fm',
-    cover:
-      'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=800&q=80',
   },
   org3: {
     id: 'org3',
@@ -96,8 +94,6 @@ const ORGANIZERS = {
     eventsHosted: 18,
     verified: false,
     instagram: 'ourstrayliberties',
-    cover:
-      'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
   },
   org4: {
     id: 'org4',
@@ -111,8 +107,6 @@ const ORGANIZERS = {
     eventsHosted: 100,
     verified: false,
     instagram: 'thugshop66',
-    cover:
-      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
   },
   org5: {
     id: 'org5',
@@ -126,8 +120,6 @@ const ORGANIZERS = {
     eventsHosted: 9,
     verified: false,
     instagram: 'fivetotenpm',
-    cover:
-      'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80',
   },
 };
 
@@ -666,7 +658,7 @@ function GoingAvatars({ going, interested }) {
   );
 }
 
-function SubscribeButton({ orgId, sm }) {
+function SubscribeButton({ orgId: _orgId, sm }) {
   const [on, setOn] = useState(false);
   return (
     <button
@@ -1288,7 +1280,7 @@ function OrganizerProfile({ org, events, onBack, onEventSelect }) {
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <SubscribeButton orgId={org.id} />
+              <SubscribeButton orgId={org.id} sm={false} />
               {org.instagram && (
                 <a
                   href={`https://instagram.com/${org.instagram}`}
@@ -1340,7 +1332,7 @@ function OrganizerProfile({ org, events, onBack, onEventSelect }) {
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <SubscribeButton orgId={org.id} />
+              <SubscribeButton orgId={org.id} sm={false} />
               {org.instagram && (
                 <a
                   href={`https://instagram.com/${org.instagram}`}
